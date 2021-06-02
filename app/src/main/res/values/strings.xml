@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MrgsCafeApp</string>
+    <string name="app_title">MRGS Cafe</string>
+    <string name="app_title_description">Hi there! Welcome to the MRGS Cafe!</string>
+    <string name="app_title_image_description">This is the image</string>
+    <string name="app_signin_button_description">This is the sign in button</string>
+    <string name="app_sign_in">Sign in with Google</string>
 </resources>
