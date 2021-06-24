@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#D1BD38"
         android:contentDescription="@string/app_signin_button_description"
+        android:onClick="onClick"
         android:text="@string/app_sign_in"
         android:textColor="#59738F"
         app:layout_constraintBottom_toBottomOf="parent"
