@@ -46,17 +46,19 @@ public class MainActivity extends AppCompatActivity {
         updateUI(account);
     }
 
+    // Update the UI when the user tries to sign in
     private void updateUI(GoogleSignInAccount account) {
         if(account != null){
-            Toast.makeText(this,"U Signed In successfully",Toast.LENGTH_LONG).show();
-            //startActivity(new Intent(this,AnotherActivity.class));
+            Toast.makeText(this,"You Signed In Successfully",Toast.LENGTH_LONG).show();
+
 
         }else {
-            Toast.makeText(this,"U Didn't signed in",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"You Didn't Sign In",Toast.LENGTH_LONG).show();
         }
 
         }
 
+        // When the Sign In With Google button is clicked, start the sign in process
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sign_in_button:
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+        // sign the user in and start the next activity
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -81,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
             Log.w("sign in failed", "signInResult:failed code=" + e.getStatusCode());
             updateUI(null);
         }
