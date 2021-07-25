@@ -13,7 +13,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Menu</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_order_history">Order History</string>
+    <string name="menu_favorites_list">Favorites</string>
+    <string name="menu_student_name_test">Brian Bizoza</string>
+    <string name="menu_student_email">17380@students.mrgs.school.nz</string>
+    <string name="menu_settings">Settings</string>
+    <string name="cart_icon_description">This is the cart icon for the floating button</string>
 </resources>
