@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         if(account != null){
             Toast.makeText(this,"You Signed In Successfully",Toast.LENGTH_LONG).show();
 
-
         }else {
             Toast.makeText(this,"You Didn't Sign In",Toast.LENGTH_LONG).show();
         }
