@@ -12,8 +12,10 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.Api;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
@@ -78,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             // Signed in successfully, show authenticated UI.
-            updateUI(account);
+            //updateUI(account);
             Intent intent = new Intent(this, main_menu.class);
             startActivity(intent);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             Log.w("sign in failed", "signInResult:failed code=" + e.getStatusCode());
-            updateUI(null);
+            //updateUI(null);
         }
     }
 

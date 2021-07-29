@@ -21,4 +21,19 @@
     <string name="menu_student_email">17380@students.mrgs.school.nz</string>
     <string name="menu_settings">Settings</string>
     <string name="cart_icon_description">This is the cart icon for the floating button</string>
+
+    <string-array name="Menu_items">
+        <item>Beef Burger</item>
+        <item>Coke</item>
+        <item>Egg Sandwich</item>
+        <item>Garlic Bread</item>
+        <item>Chicken Wrap</item>
+    </string-array>
+    <string-array name="Menu_item_descriptions">
+        <item>This is a Beef Burger</item>
+        <item>This is a Coke</item>
+        <item>This is a Egg Sandwich</item>
+        <item>This is a Garlic Bread</item>
+        <item>This is a Chicken Wrap</item>
+    </string-array>
 </resources>

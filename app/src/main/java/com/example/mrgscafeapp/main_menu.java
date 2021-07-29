@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.mrgscafeapp.ui.MyAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -15,8 +16,17 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class main_menu extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+
+    String s1[], s2[];
+    int menu_images[] = {R.drawable.beef_burger_product_image, R.drawable.coke_bottle_product_image,
+            R.drawable.egg_sandwich_product_image, R.drawable.garlic_bread_product_image,
+            R.drawable.chicken_wrap_product_image};
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -27,13 +37,24 @@ public class main_menu extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+
+        //recyclerView = findViewById(R.id.recyclerView);
+
+        s1 = getResources().getStringArray(R.array.Menu_items);
+        s2 = getResources().getStringArray(R.array.Menu_item_descriptions);
+
+        MyAdapter myAdapter = new MyAdapter(this, s1, s2, menu_images);
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        }
+        );
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
