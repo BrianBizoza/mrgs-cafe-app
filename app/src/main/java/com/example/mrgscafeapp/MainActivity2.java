@@ -17,7 +17,7 @@ public class MainActivity2 extends AppCompatActivity {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sign_in_button:
-                Intent intent = new Intent(this, main_menu.class);
+                Intent intent = new Intent(this, MainMenu.class);
                 startActivity(intent);
                 break;
         }
